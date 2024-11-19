@@ -14,7 +14,7 @@
 
 #include "fastpair/common/fast_pair_switches.h"
 
-#include <string>
+#include <string.h>
 
 namespace nearby {
 namespace fastpair {
