@@ -34,6 +34,7 @@ cc_library(
         "//internal/platform:types",
         "@com_google_absl//absl/functional:any_invocable",
         "@com_google_absl//absl/strings",
+        "@com_google_absl//absl/container:flat_hash_map",
     ],
 )
 
