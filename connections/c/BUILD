@@ -28,7 +28,7 @@ cc_library(
         "nc_def.h",
         "nc_types.h",
     ],
-    compatible_with = ["//buildenv/target:non_prod"],
+
 )
 
 cc_library(
@@ -36,7 +36,7 @@ cc_library(
     srcs = [
         "nc.cc",
     ],
-    compatible_with = ["//buildenv/target:non_prod"],
+
     copts = ["-DNC_DLL"],
     deps = [
         ":nc_types",
@@ -58,7 +58,7 @@ cc_library(
 windows.cc_windows_dll(
     name = "nc_windows",
     srcs = [],
-    compatible_with = ["//buildenv/target:non_prod"],
+
     copts = ["-DNC_DLL"],
     tags = ["windows-dll"],
     deps = [

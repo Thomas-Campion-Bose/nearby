@@ -22,7 +22,6 @@ cc_library(
     name = "fast_pair_controller",
     srcs = ["fast_pair_controller.cc"],
     hdrs = ["fast_pair_controller.h"],
-    compatible_with = ["//buildenv/target:non_prod"],
     visibility = ["//:__subpackages__"],
     deps = [
         "//fastpair/common",
@@ -59,7 +58,6 @@ cc_test(
 cc_library(
     name = "fast_pair_seeker",
     hdrs = ["fast_pair_seeker.h"],
-    compatible_with = ["//buildenv/target:non_prod"],
     visibility = ["//:__subpackages__"],
     deps = [
         "//fastpair/common",
@@ -71,7 +69,7 @@ cc_library(
 cc_library(
     name = "fast_pair_plugin",
     hdrs = ["fast_pair_plugin.h"],
-    compatible_with = ["//buildenv/target:non_prod"],
+
     visibility = ["//:__subpackages__"],
     deps = [
         ":fast_pair_events",
@@ -82,7 +80,6 @@ cc_library(
 cc_library(
     name = "fast_pair_events",
     hdrs = ["fast_pair_events.h"],
-    compatible_with = ["//buildenv/target:non_prod"],
     visibility = ["//:__subpackages__"],
     deps = [
     ],
@@ -92,7 +89,6 @@ cc_library(
     name = "fast_pair_service",
     srcs = ["fast_pair_service.cc"],
     hdrs = ["fast_pair_service.h"],
-    compatible_with = ["//buildenv/target:non_prod"],
     visibility = ["//:__subpackages__"],
     deps = [
         ":fast_pair_plugin",
@@ -103,9 +99,6 @@ cc_library(
         "//fastpair/repository:device_repository",
         "//fastpair/repository:repository_impl",
         "//fastpair/server_access",
-        "//internal/account",
-        "//internal/auth:oauth_lib",
-        "//internal/auth:types",
         "//internal/flags:nearby_flags",
         "//internal/network:nearby_http_client",
         "//internal/network:types",
@@ -134,7 +127,6 @@ cc_test(
         "//fastpair/internal",
         "//fastpair/message_stream:fake_provider",
         "//fastpair/plugins:fake_fast_pair_plugin",
-        "//internal/account",
         "//internal/network:types",
         "//internal/platform:test_util",
         "//internal/platform:types",

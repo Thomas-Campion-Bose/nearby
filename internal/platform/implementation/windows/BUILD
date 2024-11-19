@@ -154,7 +154,7 @@ cc_library(
     hdrs = [
         "string_utils.h",
     ],
-    compatible_with = ["//buildenv/target:non_prod"],
+
     visibility = [
         "//internal/platform:__subpackages__",
         "//location/nearby:__subpackages__",
